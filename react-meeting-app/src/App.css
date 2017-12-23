@@ -1,0 +1,33 @@
+.demo-card-wide.mdl-card {
+  width: 100%;
+  margin-bottom: 40px;
+}
+.demo-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 176px;
+  background: url('https://i2.cdn.turner.com/cnnnext/dam/assets/140926165711-john-sutter-profile-image-large-169.jpg') center / cover;
+}
+.demo-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.mdl-card__supporting-text, 
+.mdl-textfield{
+  width: 100%;
+}
+
+.demo-layout-transparent {
+  background: url('bg.jpg') center / cover;
+  height: 500px;
+}
+.demo-layout-transparent .mdl-layout__header,
+.demo-layout-transparent .mdl-layout__drawer-button {
+  /* This background is dark, so we set text to white. Use 87% black instead if
+     your background is light. */
+  color: white;
+}
