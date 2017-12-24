@@ -38,7 +38,7 @@ class App extends Component {
                     <div className="row">
                         <div className="col-12">
 
-                            <Employee />
+                            <MeetingList />
                         </div>
                     </div>
                 </div>

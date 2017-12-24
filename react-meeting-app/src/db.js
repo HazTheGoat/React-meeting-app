@@ -1,5 +1,5 @@
-export class Db {
-    getEmployees(){
+class Db {
+    static getEmployees(){
         return [
             {
                 id: 1,
@@ -25,14 +25,22 @@ export class Db {
         ]
     }
 
-    getMeetings(){
+    static getMeetings(){
         return [
             {
                 id: 1,
                 title: "Yara - Estimating sprint 1",
                 description: "some description",
                 attendees: [1,2]
+            },
+            {
+                id: 2,
+                title: "Interactive Crop Program",
+                description: "some description some description",
+                attendees: [1,2,3]
             }
         ]
     }
 }
+
+export default Db;
