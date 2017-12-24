@@ -1,10 +1,7 @@
 import React, {Component} from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Employee from './Components/Employee';
-import MeetingList from './Components/MeetingList';
-import Meeting from './Components/Meeting';
-import EmployeeList from './Components/EmployeeList';
+import MeetingList from './Pages/MeetingList';
+import EmployeeList from './Pages/EmployeeList';
 
 class App extends Component {
     render() {
@@ -39,6 +36,7 @@ class App extends Component {
                         <div className="col-12">
 
                             <MeetingList />
+                            <EmployeeList />
                         </div>
                     </div>
                 </div>

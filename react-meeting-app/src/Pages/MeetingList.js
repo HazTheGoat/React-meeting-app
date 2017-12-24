@@ -1,6 +1,6 @@
 import React from 'react';
 import Db from '../db';
-import Meeting from './Meeting';
+import Meeting from './../Components/Meeting';
 
 class MeetingList extends React.Component{
     render (){
@@ -8,7 +8,7 @@ class MeetingList extends React.Component{
             <div>
                 <h1>Meeting list</h1>
                 {
-                    Db.getMeetings().map(meeting => <Meeting key={meeting.id} meeting="meeting" />)
+                    Db.getMeetings().map(meeting => <Meeting key={meeting.id} meeting={meeting} />)
                 }
             </div>
         )
