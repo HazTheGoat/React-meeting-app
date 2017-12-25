@@ -11,9 +11,11 @@ class App extends React.Component {
         this.initState();
     }
     initState(){
+        let employees = [...Db.getEmployees()];
+        let meetings = [...Db.getMeetings()];
         this.state = {
-            employees: Db.getEmployees(),
-            meetings: Db.getMeetings() 
+            employees: employees,
+            meetings: meetings
         }
     }
     render() {
@@ -21,7 +23,7 @@ class App extends React.Component {
             <div>
                 <div
                     className="demo-layout-transparent mdl-layout mdl-js-layout has-drawer is-upgraded"
-                    data-upgraded=",MaterialLayout">
+                    data-upgraded="MaterialLayout">
                     <div className="container">
                         <div className="row">
                             <div className="col-12">
@@ -46,7 +48,7 @@ class App extends React.Component {
                 <div className="container">
                     <div className="row">
                         <div className="col-12">
-                            <MeetingList meetings={this.state.meetings} />
+                            <MeetingList meetings={ this.state.meetings } />
                             <EmployeeList employees={ this.state.employees } />
                         </div>
                     </div>
