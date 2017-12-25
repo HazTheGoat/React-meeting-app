@@ -8,16 +8,24 @@ class App extends React.Component {
     constructor(){
         super();
         this.initState = this.initState.bind(this);     
-        this.initState();
-    }
-    initState(){
+
         let employees = [...Db.getEmployees()];
         let meetings = [...Db.getMeetings()];
         this.state = {
             employees: employees,
             meetings: meetings
         }
+        this.initState();
     }
+
+    updateEmployee(employee){
+
+    }
+
+    updateMeeting(meeting){
+        
+    }
+
     render() {
         return (
             <div>
