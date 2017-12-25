@@ -1,6 +1,7 @@
 import React from 'react';
 
 class Employee extends React.Component {
+    
     render() {
         return (
             <div className="demo-card-wide mdl-card mdl-shadow--2dp">
@@ -9,15 +10,15 @@ class Employee extends React.Component {
                 </div>
                 <div className="mdl-card__supporting-text">
                     <div className="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <input className="mdl-textfield__input" type="text" id="sample3" defaultValue={this.props.employee.name}/>
+                        <input className="mdl-textfield__input" type="text" id="sample3" onChange={ console.log() } value={this.props.employee.name}/>
                         <label className="mdl-textfield__label" htmlFor="sample3">Name</label>
                     </div>
                     <div className="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <input className="mdl-textfield__input" type="text" id="sample3" defaultValue={this.props.employee.position}/>
+                        <input className="mdl-textfield__input" type="text" id="sample3" onChange={ console.log() } value={this.props.employee.position}/>
                         <label className="mdl-textfield__label" htmlFor="sample3">Position</label>
                     </div>
                     <div className="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <input className="mdl-textfield__input" type="text" id="sample3" defaultValue={this.props.employee.rate}/>
+                        <input className="mdl-textfield__input" type="text" id="sample3" onChange={ console.log() } value={this.props.employee.rate}/>
                         <label className="mdl-textfield__label" htmlFor="sample3">Hourly rate</label>
                     </div>
                 </div>

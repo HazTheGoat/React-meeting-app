@@ -1,9 +1,21 @@
-import React, {Component} from 'react';
+import React from 'react';
 import './App.css';
 import MeetingList from './Pages/MeetingList';
 import EmployeeList from './Pages/EmployeeList';
+import Db from './db';
 
-class App extends Component {
+class App extends React.Component {
+    constructor(){
+        super();
+        this.initState = this.initState.bind(this);     
+        this.initState();
+    }
+    initState(){
+        this.state = {
+            employees: Db.getEmployees(),
+            meetings: Db.getMeetings() 
+        }
+    }
     render() {
         return (
             <div>
@@ -34,9 +46,8 @@ class App extends Component {
                 <div className="container">
                     <div className="row">
                         <div className="col-12">
-
-                            <MeetingList />
-                            <EmployeeList />
+                            <MeetingList meetings={this.state.meetings} />
+                            <EmployeeList employees={ this.state.employees } />
                         </div>
                     </div>
                 </div>

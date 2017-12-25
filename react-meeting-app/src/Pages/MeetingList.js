@@ -8,7 +8,7 @@ class MeetingList extends React.Component{
             <div>
                 <h1>Meeting list</h1>
                 {
-                    Db.getMeetings().map(meeting => <Meeting key={meeting.id} meeting={meeting} />)
+                    this.props.meetings.map(meeting => <Meeting key={meeting.id} meeting={meeting} />)
                 }
             </div>
         )

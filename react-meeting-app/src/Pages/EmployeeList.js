@@ -1,6 +1,5 @@
 import React from 'react';
 import Employee from './../Components/Employee';
-import Db from './../db';
 
 class EmployeeList extends React.Component {
     render() {
@@ -9,7 +8,7 @@ class EmployeeList extends React.Component {
                 <h2>Employee list</h2>
                 <div className="row">
                     {
-                        Db.getEmployees().map(employee => (
+                        this.props.employees.map(employee => (
                             <div className="col-4" key={employee.id}>
                                 <Employee employee={employee} />
                             </div>
