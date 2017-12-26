@@ -3,10 +3,10 @@ import React from 'react';
 class Meeting extends React.Component {
     render() {
         return (
-            <div>
+            <a href="#ng" className="meeting-card">
                 <h3>{ this.props.meeting.title }</h3>
                 <p>{ this.props.meeting.description }</p>
-            </div>
+            </a>
         )
     }
 }

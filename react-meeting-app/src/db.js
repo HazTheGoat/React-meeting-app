@@ -28,13 +28,13 @@ class Db {
                 {
                     id: 1,
                     title: "Yara - Estimating sprint 1",
-                    description: "some description",
+                    description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.",
                     attendees: [1, 2]
                 }, 
                 {
                     id: 2,
                     title: "Interactive Crop Program",
-                    description: "some description some description",
+                    description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod.",
                     attendees: [1, 2, 3]
                 }
             ]
