@@ -9,8 +9,15 @@ class Employee extends React.Component {
 
     handleSubmit(event){
         event.preventDefault();
+        
+        let updatedEmployee = {
+            id: this.props.employee.id,
+            name: this.employeeName.value,
+            position: this.employeePosition.value,
+            rate: this.employeeRate.value
+        }
 
-        console.log(this.employeeName.value);
+        this.props.updateEmployee(updatedEmployee);
     }
 
     render() {

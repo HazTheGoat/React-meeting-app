@@ -2,7 +2,16 @@ import React from 'react';
 import Employee from './../Components/Employee';
 
 class EmployeeList extends React.Component {
+    constructor(){
+        super();
+    }
+
+    componentDidMount(){
+        
+    }
+
     render() {
+        console.log("this.props.employees: ", this.props.employees)
         return (
             <div>
                 <h2>Employee list</h2>
@@ -10,7 +19,7 @@ class EmployeeList extends React.Component {
                     {
                         this.props.employees.map(employee => (
                             <div className="col-4" key={employee.id}>
-                                <Employee employee={employee} />
+                                <Employee updateEmployee={this.props.updateEmployee} employee={employee} />
                             </div>
                         ))
                     }

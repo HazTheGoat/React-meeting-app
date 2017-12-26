@@ -3,27 +3,58 @@ import './App.css';
 import MeetingList from './Pages/MeetingList';
 import EmployeeList from './Pages/EmployeeList';
 import Db from './db';
+import base from './base';
 
 class App extends React.Component {
-    constructor(){
+    constructor() {
         super();
-        this.initState = this.initState.bind(this);     
+        this.updateEmployee = this
+            .updateEmployee
+            .bind(this);
+        this.updateMeeting = this
+            .updateMeeting
+            .bind(this);
 
-        let employees = [...Db.getEmployees()];
-        let meetings = [...Db.getMeetings()];
+        const setLocalStorage = Db.setLocalStorage();
+        const employees = [
+            ...Db
+                .getEmployees()
+                .employees
+        ];
+        const meetings = [
+            ...Db
+                .getMeetings()
+                .meetings
+        ];
+
         this.state = {
             employees: employees,
             meetings: meetings
         }
-        this.initState();
     }
 
-    updateEmployee(employee){
+    componentWillUpdate(nextProps, nextState) {
+        localStorage.setItem('react-meeting-app', JSON.stringify(nextState));
+    }
+    
+    updateEmployee(employee) {
+        let employeesCopy = [...this.state.employees];
 
+        let updatedEmployees = employeesCopy.map(x => {
+            if (x.id === employee.id) {
+                x = employee
+            }
+
+            return x;
+        })
+
+        this.setState({employees: updatedEmployees})
     }
 
-    updateMeeting(meeting){
-        
+    updateMeeting(meeting) {
+        let meetingsCopy = {
+            ...this.state.meetings
+        };
     }
 
     render() {
@@ -56,8 +87,10 @@ class App extends React.Component {
                 <div className="container">
                     <div className="row">
                         <div className="col-12">
-                            <MeetingList meetings={ this.state.meetings } />
-                            <EmployeeList employees={ this.state.employees } />
+                            <MeetingList updateMeeting={this.updateMeeting} meetings={this.state.meetings}/>
+                            <EmployeeList
+                                updateEmployee={this.updateEmployee}
+                                employees={this.state.employees}/>
                         </div>
                     </div>
                 </div>
