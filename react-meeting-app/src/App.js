@@ -3,7 +3,6 @@ import './App.css';
 import MeetingList from './Pages/MeetingList';
 import EmployeeList from './Pages/EmployeeList';
 import Db from './db';
-import base from './base';
 
 class App extends React.Component {
     constructor() {
