@@ -1,12 +1,20 @@
 import React from 'react';
+import { Route, Link } from 'react-router-dom'
+
 
 class Meeting extends React.Component {
     render() {
         return (
-            <a href="#ng" className="meeting-card">
-                <h3>{ this.props.meeting.title }</h3>
-                <p>{ this.props.meeting.description }</p>
-            </a>
+            <div>
+                <Link to={`/meeting/${this.props.meeting.id}`}>
+                    <div className="meeting-card">
+                        <h3>{ this.props.meeting.title }</h3>
+                        <p>{ this.props.meeting.description }</p>
+                    </div>
+                </Link>
+
+            </div>
+            
         )
     }
 }

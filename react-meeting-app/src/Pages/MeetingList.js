@@ -1,5 +1,4 @@
 import React from 'react';
-import Db from '../db';
 import Meeting from './../Components/Meeting';
 
 class MeetingList extends React.Component{
@@ -8,7 +7,7 @@ class MeetingList extends React.Component{
             <div>
                 <h1>Meeting list</h1>
                 {
-                    this.props.meetings.map(meeting => <Meeting updateMeeting={ this.props.updateMeeting } key={meeting.id} meeting={meeting} />)
+                    this.props.meetings.map(meeting => <Meeting key={meeting.id} meeting={meeting} />)
                 }
             </div>
         )
