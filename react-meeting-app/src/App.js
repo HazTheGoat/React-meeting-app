@@ -17,14 +17,10 @@ class App extends React.Component {
             .bind(this);
 
         const employees = [
-            ...Db
-                .getEmployees()
-                .employees
+            ...Db.getEmployees().employees
         ];
         const meetings = [
-            ...Db
-                .getMeetings()
-                .meetings
+            ...Db.getMeetings().meetings
         ];
 
         this.state = {
@@ -84,10 +80,8 @@ class App extends React.Component {
                     <div className="container">
                         <div className="row">
                             <div className="col-12">
-                                <div>
-                                    <Route path={`/meeting/:id`} render={props => <MeetingPage {...props} meetings={this.state.meetings} />}/>
+                                    <Route path={`/meeting/:id`} render={props => <MeetingPage {...props} meetings={this.state.meetings} employees={this.state.employees} />}/>
                                     <Route exact path='/' render={props => <MeetingList {...props} meetings={this.state.meetings} />}/>
-                                </div>
                             </div>
                         </div>
                     </div>
