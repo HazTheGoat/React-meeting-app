@@ -6,7 +6,7 @@ class Meeting extends React.Component {
     render() {
         return (
             <div>
-                <Link to={`/meeting/${this.props.meeting.id}`}>
+                <Link className="employee-card" to={`/meeting/${this.props.meeting.id}`}>
                     <div className="meeting-card">
                         <h3>{ this.props.meeting.title }</h3>
                         <p>{ this.props.meeting.description }</p>

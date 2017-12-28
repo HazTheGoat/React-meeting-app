@@ -36,16 +36,17 @@ class MeetingPage extends React.Component {
 
             return false;
         })
-
-        console.log("AttendeesInMeeting: ", this.attendeesInMeeting);
     }
 
     render() {
         return (
-            <div>
-                <h1>{this.currentMeeting.title}</h1>
-                <p>{this.currentMeeting.description}</p>
-                <h3>Attendees:</h3>
+            <div className="meeting-page">
+                <div className="title-container">
+                    <h1>{this.currentMeeting.title}</h1>
+                    <p>{this.currentMeeting.description}</p>
+                </div>
+                <br/><br/>
+                <h4>Attendees</h4>
                 <table
                     className="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
                     <thead>
@@ -53,16 +54,28 @@ class MeetingPage extends React.Component {
                             <th className="mdl-data-table__cell--non-numeric"></th>
                             <th className="mdl-data-table__cell--non-numeric">Name</th>
                             <th>Position</th>
+                            <th>Phone</th>
+                            <th>Email</th>
                             <th>Rate</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td></td>
-                            <td className="mdl-data-table__cell--non-numeric">Acrylic (Transparent)</td>
-                            <td>25</td>
-                            <td>$2.90</td>
-                        </tr>
+                        {
+                            this.attendeesInMeeting.map(attendee => {
+                                return(
+                                    <tr key={attendee.id}>
+                                        <td>
+                                            <img className="table-avatar" src={attendee.imgUrl} alt=""/>
+                                        </td>
+                                        <td className="mdl-data-table__cell--non-numeric">{ attendee.name }</td>
+                                        <td>{ attendee.position }</td>
+                                        <td>{ attendee.phone }</td>
+                                        <td>{ attendee.email }</td>
+                                        <td>{ attendee.rate },-</td>
+                                    </tr>
+                                )
+                            })
+                        }
                     </tbody>
                 </table>
             </div>

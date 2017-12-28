@@ -7,21 +7,27 @@ class Db {
                     name: "Hazar Askari",
                     rate: 1200,
                     position: "Frontend developer",
-                    imgUrl: "http://placehold.it/200x200"
+                    phone: "91990860",
+                    email: "hazar.askari@knowit.no",
+                    imgUrl: "http://www.claimcash.in/cadmin/uploads/stores/pro.jpg"
                 }, 
                 {
                     id: 2,
                     name: "Yelitza Yaramillo",
                     rate: 1300,
+                    phone: "97753497",
                     position: "Backend developer",
-                    imgUrl: "http://placehold.it/200x200"
+                    email: "yelitza.yaramillo@knowit.no",
+                    imgUrl: "https://d1jiktx90t87hr.cloudfront.net/223/wp-content/uploads/2016/09/michelle-prince-profile-img.png"
                 }, 
                 {
                     id: 3,
                     name: "Anita Nygård",
                     rate: 1000,
+                    phone: "96738491",
+                    email: "anita.nygaard@knowit.no",
                     position: "Project leader",
-                    imgUrl: "http://placehold.it/200x200"
+                    imgUrl: "https://www.historicacanada.ca/sites/default/files/staff_davida_detail_0.png"
                 }
             ],
             meetings: [
@@ -39,8 +45,8 @@ class Db {
                 }
             ]
         }
-
-        if(!localStorage.getItem('react-meeting-app'))
+        
+        //if(!localStorage.getItem('react-meeting-app'))
             localStorage.setItem('react-meeting-app', JSON.stringify(state))
     }
 

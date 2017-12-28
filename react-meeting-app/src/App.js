@@ -16,9 +16,13 @@ class App extends React.Component {
             .updateMeeting
             .bind(this);
 
+        //if(!localStorage.getItem('react-meeting-app'))
+            Db.setLocalStorage();
+        
         const employees = [
             ...Db.getEmployees().employees
         ];
+        
         const meetings = [
             ...Db.getMeetings().meetings
         ];
@@ -49,6 +53,14 @@ class App extends React.Component {
 
     updateMeeting(meeting) {
        
+    }
+
+    deleteMeeting(meeting){
+
+    }
+
+    addMeeting(){
+        
     }
 
     render() {

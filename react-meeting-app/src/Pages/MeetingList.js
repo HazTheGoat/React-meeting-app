@@ -5,7 +5,9 @@ class MeetingList extends React.Component{
     render (){
         return(
             <div>
-                <h1>Meeting list</h1>
+                <div className="title-container">
+                    <h1>Meeting list</h1>
+                </div>
                 {
                     this.props.meetings.map(meeting => <Meeting key={meeting.id} meeting={meeting} />)
                 }

@@ -5,7 +5,10 @@ class EmployeeList extends React.Component {
     render() {
         return (
             <div>
-                <h2>Employee list</h2>
+                
+                <div className="title-container">
+                    <h1>Employee list</h1>
+                </div>
                 <div className="row">
                     {
                         this.props.employees.map(employee => (
