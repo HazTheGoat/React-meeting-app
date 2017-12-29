@@ -73,6 +73,8 @@ p{
   width: 40px;
   height: 40px;
   border-radius: 100%;
+  object-fit: cover;
+    object-position: center center;
 }
 
 .employee-card{
