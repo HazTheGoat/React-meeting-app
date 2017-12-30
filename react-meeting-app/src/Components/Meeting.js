@@ -12,9 +12,7 @@ class Meeting extends React.Component {
                         <p>{ this.props.meeting.description }</p>
                     </div>
                 </Link>
-
             </div>
-            
         )
     }
 }

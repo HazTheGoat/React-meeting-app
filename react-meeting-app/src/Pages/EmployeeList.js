@@ -5,7 +5,6 @@ class EmployeeList extends React.Component {
     render() {
         return (
             <div>
-                
                 <div className="title-container">
                     <h1>Employee list</h1>
                 </div>
@@ -19,7 +18,6 @@ class EmployeeList extends React.Component {
                     }
                 </div>
             </div>
-
         )
     }
 }

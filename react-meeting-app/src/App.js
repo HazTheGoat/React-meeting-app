@@ -83,7 +83,10 @@ class App extends React.Component {
                                             </nav>
                                         </div>
                                     </header>
-                                    <main className="mdl-layout__content"></main>
+                                    <main className="mdl-layout__content">
+                                        <h1>Manage your meetings</h1>
+                                        <p>Get control of how much your meetings are costing you with our simple app.</p>
+                                    </main>
                                     <div className="mdl-layout__obfuscator"></div>
                                 </div>
                             </div>
@@ -92,8 +95,8 @@ class App extends React.Component {
                     <div className="container">
                         <div className="row">
                             <div className="col-12">
-                                    <Route path={`/meeting/:id`} render={props => <MeetingPage {...props} meetings={this.state.meetings} employees={this.state.employees} />}/>
-                                    <Route exact path='/' render={props => <MeetingList {...props} meetings={this.state.meetings} />}/>
+                                <Route path={`/meeting/:id`} render={props => <MeetingPage {...props} meetings={this.state.meetings} employees={this.state.employees} />}/>
+                                <Route exact path='/' render={props => <MeetingList {...props} meetings={this.state.meetings} />}/>
                             </div>
                         </div>
                     </div>
