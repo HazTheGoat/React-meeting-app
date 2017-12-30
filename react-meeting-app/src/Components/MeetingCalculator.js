@@ -37,7 +37,8 @@ class MeetingCalculator extends React.Component{
                     { this.state.accumulatedCost } <span className="calculator-currency">kr</span>
                     </div>
                 </div>
-                <p className="diffused">This meeting costs { parseFloat(this.props.secondlyRate).toFixed(2) },- per second, { parseInt(this.props.minuteRate) },- per minute and { parseInt(this.props.hourlyRate) },- per hour. This meeting has a total cost of { this.props.employeeRatesSum * this.props.meetingDurationInHours },-</p>
+                <div className="meeting-info">This meeting costs { parseFloat(this.props.secondlyRate).toFixed(2) },- per second, { parseInt(this.props.minuteRate) },- per minute and { parseInt(this.props.hourlyRate) },- per hour.</div>
+                <div>This meeting has a total cost of { this.props.employeeRatesSum * this.props.meetingDurationInHours },-</div>
             </div>
             
         )

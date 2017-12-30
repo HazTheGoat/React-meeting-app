@@ -96,19 +96,19 @@ class Db {
             meetings: [
                 {
                     id: 1,
-                    title: "Yara - Estimating sprint 1",
-                    description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.",
-                    startDate: "Fri Dec 29 2017 11:00:00 GMT+0100",
-                    endTime: "Fri Dec 29 2017 13:00:00 GMT+0100",
-                    attendees: [1,4,9]
-                }, 
-                {
-                    id: 2,
                     title: "Interactive Crop Program",
                     description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod.",
                     startDate: "Fri Dec 30 2017 09:00:00 GMT+0100",
                     endTime: "Fri Dec 30 2017 16:30:00 GMT+0100",
                     attendees: [1,2,3,4,5,6,7,8,9,10]
+                },
+                {
+                    id: 2,
+                    title: "Yara - Estimating sprint 1",
+                    description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.",
+                    startDate: "Fri Dec 29 2017 11:00:00 GMT+0100",
+                    endTime: "Fri Dec 29 2017 13:00:00 GMT+0100",
+                    attendees: [1,4,9]
                 }
             ]
         }
